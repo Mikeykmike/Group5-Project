@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dyanna/AndroidStudioProjects/Group5-Project/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.14375" />
+        <entry key="..\:/Users/Dyanna/AndroidStudioProjects/Group5-Project/app/src/main/res/layout-w936dp/activity_login.xml" value="0.12568306010928962" />
+        <entry key="..\:/Users/Dyanna/AndroidStudioProjects/Group5-Project/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Dyanna/AndroidStudioProjects/Group5-Project/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Dyanna/AndroidStudioProjects/Group5-Project/app/src/main/res/layout/fragment_login_screen.xml" value="0.3" />
+        <entry key="..\:/Users/Dyanna/AndroidStudioProjects/Group5-Project/app/src/main/res/layout/game_image_widget.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Dyanna/AndroidStudioProjects/Group5-Project/app/src/main/res/menu/bottom_nav_bar.xml" value="0.2546875" />
         <entry key="..\:/Users/Matt/AndroidStudioProjects/GameFinder/app/src/main/res/layout/activity_main.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Matt/Documents/Dev/Group5-Project/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Matt/Documents/Dev/Group5-Project/app/src/main/res/layout/game_image_widget.xml" value="0.36666666666666664" />
