@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/gameBrowser">
+
+    <fragment
+        android:id="@+id/gameBrowser"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.GameBrowser"
+        android:label="GameBrowser" />
+</navigation>
