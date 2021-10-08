@@ -16,7 +16,7 @@ class SearchBar : AppCompatActivity() {
             binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(binding.root)
 
-            val user = arrayOf("Shooter","Fighting","Adventure","Puzzle","Strategy",)
+            val user = arrayOf("Shooter","Fighting","Adventure","Puzzle","Strategy")
 
             val userAdapter : ArrayAdapter<String> = ArrayAdapter(
                 this,android.R.layout.simple_list_item_1,
