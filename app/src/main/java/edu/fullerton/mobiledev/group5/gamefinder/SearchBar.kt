@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.SearchView
 import edu.fullerton.mobiledev.group5.gamefinder.databinding.ActivityMainBinding
 
+
 class SearchBar : AppCompatActivity() {
 
         lateinit var binding : ActivityMainBinding
