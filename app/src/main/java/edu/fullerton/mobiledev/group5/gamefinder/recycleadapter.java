@@ -27,8 +27,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public RecyclerAdapter(List<String> moviesList) {
         this.genreList = moviesList;
-        moviesListAll = new ArrayList<>();
-        moviesListAll.addAll(moviesList);
+        genreListAll = new ArrayList<>();
+        genreListAll.addAll(moviesList);
     }
 
     @NonNull
