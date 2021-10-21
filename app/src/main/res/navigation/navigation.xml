@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationController"
     app:startDestination="@id/gameBrowser">
 
     <fragment
         android:id="@+id/gameBrowser"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.GameBrowser"
-        android:label="GameBrowser" />
+        android:label="GameBrowser" >
+        <action
+            android:id="@+id/action_gameBrowser_to_gameDetail"
+            app:destination="@id/gameDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDetail"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.GameDetail"
+        android:label="fragment_game_detail"
+        tools:layout="@layout/fragment_game_detail" >
+        <action
+            android:id="@+id/action_gameDetail_to_gameBrowser"
+            app:destination="@id/gameBrowser" />
+    </fragment>
 </navigation>
