@@ -18,6 +18,11 @@ class GameBrowser : Fragment() {
         mainBinding.recyclerView.layoutManager = GridLayoutManager(activity,4)
         mainBinding.recyclerView.adapter = GameViewAdapter()
 
+
         return mainBinding.root
     }
+
+//    fun onGameClicked(index: Int) {
+//        findNavController().navigate(R.id.gameDetail)
+//    }
 }
