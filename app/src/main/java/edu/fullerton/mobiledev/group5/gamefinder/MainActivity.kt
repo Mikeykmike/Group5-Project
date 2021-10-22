@@ -1,11 +1,11 @@
 package edu.fullerton.mobiledev.group5.gamefinder
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.google.android.material.navigation.NavigationBarView
 import edu.fullerton.mobiledev.group5.gamefinder.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,19 +15,25 @@ class MainActivity : AppCompatActivity() {
         val mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
-        mainBinding.recyclerView.layoutManager = GridLayoutManager(this,4)
-        mainBinding.recyclerView.adapter = GameViewAdapter()
+//        val controller = findNavController(R.id.navigationController)
+//        NavigationUI.setupActionBarWithNavController(this, controller)
+//
+//        mainBinding.bottomNavigationBar.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener(
+//            fun(it: MenuItem) : Boolean {
+//                when (it.itemId)
+//                {
+//                    R.id.trending -> {
+//                        controller.navigate(R.id.gameDetail)
+//                        return true
+//                    }
+//
+//                }
+//                return true
+//            }))
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-
-        if (id == R.id.action_settings) {
-            // launch settings activity
-            startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
-            return true
-        }
-
-        return super.onOptionsItemSelected(item)
+    override fun onSupportNavigateUp(): Boolean {
+        val controller = findNavController(R.id.navigationController)
+        return controller.navigateUp()
     }
 }
