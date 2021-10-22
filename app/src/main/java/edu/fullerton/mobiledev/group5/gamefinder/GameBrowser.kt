@@ -11,7 +11,7 @@ import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentGameBrowser
 
 class GameBrowser : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+    /*override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         val mainBinding = FragmentGameBrowserBinding.inflate(layoutInflater)
 
@@ -20,6 +20,12 @@ class GameBrowser : Fragment() {
 
 
         return mainBinding.root
+    }*/
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_game_browser, container, false)
     }
 
 //    fun onGameClicked(index: Int) {
