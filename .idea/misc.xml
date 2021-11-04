@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/drawable/searchview_bg.xml" value="0.1" />
         <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/layout/game_image_widget.xml" value="0.1" />
         <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/layout/genres.xml" value="0.33" />
+        <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/menu/bottom_nav_bar.xml" value="0.14907407407407408" />
         <entry key="..\:/Users/Jasmine Nguyen/StudioProjects/Group5-Project/app/src/main/res/menu/main_menu.xml" value="0.15185185185185185" />
         <entry key="..\:/Users/Matt/AndroidStudioProjects/GameFinder/app/src/main/res/layout/activity_main.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Matt/Documents/Dev/Group5-Project/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
