@@ -6,6 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import android.view.MenuItem
+import android.view.Menu
+
+
+
+
+
+
 
 class GameDetail : Fragment() {
     // TODO: Rename and change types of parameters
@@ -14,18 +23,30 @@ class GameDetail : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-//        arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//            param2 = it.getString(ARG_PARAM2)
-//        }
+        val act: AppCompatActivity = activity as AppCompatActivity
+        act.supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_game_detail, container, false)
+    }
+
+    fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        return true
+    }
+
+    override fun onOptionsItemSelected(menuItem: MenuItem): Boolean {
+        when (menuItem.itemId) {
+            android.R.id.home -> {
+                activity?.onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(menuItem)
     }
 
     companion object {
