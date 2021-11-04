@@ -3,7 +3,7 @@ package edu.fullerton.mobiledev.group5.gamefinder
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import edu.fullerton.ecs.mdap.profiledb.database.ProfileDao
+import edu.fullerton.mobiledev.group5.gamefinder.database.ProfileDao
 
 /**
  * Generates an IntersectionViewModel tied to the database.

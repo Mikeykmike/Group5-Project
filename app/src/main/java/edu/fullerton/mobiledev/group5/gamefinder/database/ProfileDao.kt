@@ -1,4 +1,4 @@
-package edu.fullerton.mobiledev.group5.gamefinder.data.model
+package edu.fullerton.mobiledev.group5.gamefinder.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

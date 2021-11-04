@@ -1,9 +1,10 @@
-package edu.fullerton.mobiledev.group5.gamefinder.data.model
+package edu.fullerton.mobiledev.group5.gamefinder.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import edu.fullerton.mobiledev.group5.gamefinder.database.ProfileDao
 
 @Database(entities = [Profile::class], version = 1, exportSchema = false)
 abstract class ProfileDatabase: RoomDatabase() {
