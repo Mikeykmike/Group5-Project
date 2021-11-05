@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/gameBrowser"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.GameBrowser"
-        android:label="GameBrowser" >
+        android:label="Game Browser" >
         <action
             android:id="@+id/action_gameBrowser_to_gameDetail"
             app:destination="@id/gameDetail" />
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/gameDetail"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.GameDetail"
-        android:label="fragment_game_detail"
+        android:label="Game Details"
         tools:layout="@layout/fragment_game_detail" >
         <action
             android:id="@+id/action_gameDetail_to_gameBrowser"
