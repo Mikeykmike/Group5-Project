@@ -35,4 +35,5 @@
         android:id="@+id/settingsFragment"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.SettingsFragment"
         android:label="SettingsFragment" />
+        tools:layout="@layout/root_preferences">
 </navigation>
