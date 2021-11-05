@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginScreen"
-        android:name="edu.fullerton.mobiledev.group5.gamefinder.LoginScreen"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.LoginActivity"
         android:label="fragment_login_screen"
         tools:layout="@layout/fragment_login_screen" >
         <action
