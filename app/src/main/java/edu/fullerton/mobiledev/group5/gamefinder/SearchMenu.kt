@@ -44,9 +44,35 @@ class SearchMenu : AppCompatActivity() {
         if(item!=null){
             var searchView = item.actionView as SearchView
 
-            searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener)
+            searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return true
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    if (newText!!.isNotEmpty()) {
+                        displayList.clear()
+                        var search = newText.lowercase(Locale.getDefault())
+
+                        for (genre in genreList) {
+                            if (genre.lowercase(Locale.getDefault()).contains(search)) {
+                                displayList.add(genre)
+                            }
+                            recyclerView.adapter!!.notifyDataSetChanged()
+                        }
+
+                    }else{
+                        displayList.clear()
+                        displayList.addAll(genreList)
+                    }
+
+                }
+
+            }
+
+        }
 
             return super.onCreateOptionsMenu(menu)
     }
-    }
+
 }
