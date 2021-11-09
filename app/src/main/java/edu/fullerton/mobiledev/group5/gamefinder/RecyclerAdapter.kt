@@ -35,7 +35,7 @@ class RecyclerAdapter(genreList: MutableList<String>): RecyclerView.Adapter<View
             itemTitle = itemView.findViewById(R.id.itemTitle)
 
             itemView.setOnClickListener{
-                val position: Int = adapterPosition
+                val position: Int = bindingAdapterPosition
                 Toast.makeText(itemView.context, "${genre[position]}", Toast.LENGTH_LONG).show()
             }
 

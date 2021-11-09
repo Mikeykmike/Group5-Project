@@ -64,15 +64,16 @@ class SearchMenu : AppCompatActivity() {
                     }else{
                         displayList.clear()
                         displayList.addAll(genreList)
+                        recyclerView.adapter!!.notifyDataSetChanged()
                     }
-
+                        return true
                 }
 
-            }
+            })
 
         }
 
             return super.onCreateOptionsMenu(menu)
-    }
 
-}
+
+}}
