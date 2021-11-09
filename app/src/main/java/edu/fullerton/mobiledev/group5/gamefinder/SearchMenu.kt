@@ -1,9 +1,7 @@
 package edu.fullerton.mobiledev.group5.gamefinder
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
