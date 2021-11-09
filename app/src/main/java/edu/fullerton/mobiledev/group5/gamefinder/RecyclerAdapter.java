@@ -69,9 +69,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             if (charSequence == null || charSequence.length() == 0) {
                 filteredList.addAll(genreListAll);
             } else {
-                for (String movie: genreListAll) {
-                    if (movie.toLowerCase().contains(charSequence.toString().toLowerCase())) {
-                        filteredList.add(movie);
+                for (String genre: genreListAll) {
+                    if (genre.toLowerCase().contains(charSequence.toString().toLowerCase())) {
+                        filteredList.add(genre);
                     }
                 }
             }
