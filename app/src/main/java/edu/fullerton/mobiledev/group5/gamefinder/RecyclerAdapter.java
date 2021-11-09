@@ -1,5 +1,6 @@
 package edu.fullerton.mobiledev.group5.gamefinder;
 
+
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -83,8 +84,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         //Automatic on UI thread
         @Override
         protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-           genreList.clear();
-           genreList.addAll((Collection<? extends String>) filterResults.values);
+            genreList.clear();
+            genreList.addAll((Collection<? extends String>) filterResults.values);
             notifyDataSetChanged();
         }
     };
@@ -113,4 +114,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         }
     }
 }
+
+
+
+
+
 

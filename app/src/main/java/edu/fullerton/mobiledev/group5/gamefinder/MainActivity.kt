@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         val mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
-        mainBinding.recyclerView.layoutManager = GridLayoutManager(this,4)
-        mainBinding.recyclerView.adapter = GameViewAdapter()
+
     }
 }

@@ -1,6 +1,5 @@
 package edu.fullerton.mobiledev.group5.gamefinder;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -26,12 +25,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       genreList = new ArrayList<>();
+        genreList = new ArrayList<>();
         genreList.add("Fighting");
-        genreList.add("Shooter");
-        genreList.add("Adventure");
-        genreList.add("Puzzle");
-        genreList.add("Strategy");
+        genreList.add("FPS");
+        genreList.add("Puzzles");
+        genreList.add("Action");
 
 
         recyclerView = findViewById(R.id.recyclerView);
@@ -66,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 }
+
+
+
+
 
 
 
