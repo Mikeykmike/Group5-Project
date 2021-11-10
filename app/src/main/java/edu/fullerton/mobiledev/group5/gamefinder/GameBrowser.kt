@@ -30,8 +30,5 @@ class GameBrowser : Fragment() {
         return mainBinding.root
     }
 
-//    fun onGameClicked(index: Int) {
-//        findNavController().navigate(R.id.gameDetail)
-//    }
 }
 

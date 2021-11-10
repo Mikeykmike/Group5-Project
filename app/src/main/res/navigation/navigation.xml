@@ -22,4 +22,19 @@
             android:id="@+id/action_gameDetail_to_gameBrowser"
             app:destination="@id/gameBrowser" />
     </fragment>
+    <fragment
+        android:id="@+id/favorites"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Favorites"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/search"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Search"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/trending"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Trending"
+        android:label="Trending"
+        tools:layout="@layout/fragment_trending" />
 </navigation>
