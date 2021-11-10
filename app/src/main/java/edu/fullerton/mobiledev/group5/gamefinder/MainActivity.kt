@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.MenuItem
-import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -17,6 +16,9 @@ import edu.fullerton.mobiledev.group5.gamefinder.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var mainBinding: ActivityMainBinding
+    private val favorites = favorites()
+    private val search = search()
+    private val trending = trending()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +26,16 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
-        val navFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
-        val controller = navFragment.navController
-        val config = AppBarConfiguration(controller.graph)
-        setupActionBarWithNavController(controller, config)
+        mainBinding.bottomNavigationBar.setOnItemSelectedListener{
+            when(it.itemId){
+                R.id.favorites -> replaceFragment(favorites)
+                R.id.search -> replaceFragment(search)
+                R.id.trending -> replaceFragment(trending)
+            }
+            true
+        }
+//        val controller = findNavController(R.id.navigationController)
+//        NavigationUI.setupActionBarWithNavController(this, controller)
 //
 //        mainBinding.bottomNavigationBar.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener(
 //            fun(it: MenuItem) : Boolean {
@@ -42,6 +49,15 @@ class MainActivity : AppCompatActivity() {
 //                }
 //                return true
 //            }))
+
+    }
+
+    private fun replaceFragment(fragment: Fragment){
+        if (fragment != null){
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragContainer, fragment)
+            transaction.commit()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

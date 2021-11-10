@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GameFinder">
         <activity
+            android:name=".Favorites"
+            android:exported="true" />
+        <activity
+            android:name=".Favorites2"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
