@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -18,6 +19,14 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 class GameViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
     val image: ImageView = view.findViewById(R.id.imageView)
     val text: TextView = view.findViewById(R.id.textView)
+
+    var imageUrl: String = ""
+        set(value) {
+//            if (field.isNotEmpty() && field != value) {
+//                Glide.with(itemView).load(imageUrl).into(image)
+//            }
+            field = value
+        }
 
     init {
         view.setOnClickListener(this)
@@ -30,7 +39,10 @@ class GameViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickLi
 
 class GameViewAdapter : RecyclerView.Adapter<GameViewHolder>()
 {
-    var gameList: GameList = GameList(0, "","", listOf())
+    companion object {
+        var gameList: GameList = GameList(0, "","", listOf())
+    }
+
     init {
         val client = OkHttpClient.Builder().build()
         val retrofit = Retrofit.Builder()
@@ -61,6 +73,7 @@ class GameViewAdapter : RecyclerView.Adapter<GameViewHolder>()
 
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) {
         holder.text.text = gameList.results[position].name
+        holder.imageUrl = gameList.results[position].imageUrl ?: holder.imageUrl
     }
 
     override fun getItemCount(): Int = gameList.results.size
