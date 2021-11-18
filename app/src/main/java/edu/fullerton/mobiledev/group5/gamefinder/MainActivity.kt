@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private val favorites = Favorites()
     private val search = Search()
     private val trending = Trending()
+    private val options = Options()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.favNav -> controller.navigate(R.id.favorites)
                 R.id.searchNav -> controller.navigate(R.id.search)
                 R.id.trendNav -> controller.navigate(R.id.trending)
+                R.id.optionsNav-> controller.navigate(R.id.options)
             }
             true
         }

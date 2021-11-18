@@ -17,4 +17,9 @@
         android:id="@+id/trendNav"
         android:title="@string/trending"
         android:icon="@drawable/ic_baseline_trending_up_24"/>
+    <item
+        android:id="@+id/optionsNav"
+        android:title="@string/options"
+        android:icon="@drawable/ic_baseline_options_24"/>
+
 </menu>
