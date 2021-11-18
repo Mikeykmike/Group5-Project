@@ -12,11 +12,8 @@ class ProfileViewModelFactory(
     private val dataSource: ProfileDao, // Data access object
     private val application: Application): ViewModelProvider.Factory {
 
-    /**
-     * Creates the ProfileViewModel
-     */
     @Suppress("unchecked_cast")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(ProfileViewModel::class.java)) { // ViewModel class
             return ProfileViewModel(dataSource, application) as T // Call ViewModel constructor
         }

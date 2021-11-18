@@ -35,5 +35,9 @@
         android:id="@+id/settingsFragment"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.SettingsFragment"
         android:label="SettingsFragment" />
-        tools:layout="@layout/root_preferences">
+    <activity
+        android:id="@+id/signupActivity"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.SignupActivity"
+        android:label="SignupActivity" />
+    tools:layout="@layout/root_preferences">
 </navigation>
