@@ -9,6 +9,13 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.Menu
+import edu.fullerton.mobiledev.group5.gamefinder.databinding.ActivityMainBinding
+import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentGameDetailBinding
+import android.R.attr.data
+
+import android.R
+import android.R.attr
+
 
 class GameDetail : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +27,12 @@ class GameDetail : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_game_detail, container, false)
+    ): View {
+        val binding = FragmentGameDetailBinding.inflate(
+            layoutInflater, container, false)
+        val args = GameDetailArgs.fromBundle(savedInstanceState ?: Bundle.EMPTY)
+        binding.gameTitle.text = args.gameTitle
+        return binding.root
     }
 
     fun onCreateOptionsMenu(menu: Menu?): Boolean {

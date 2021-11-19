@@ -24,5 +24,7 @@ data class GameList(
 data class GameResult(
     @field:Json(name = "id") val id: Int,
     @field:Json(name = "name") val name: String?,
+    @field:Json(name = "released") val releaseDate: String?,
     @field:Json(name = "background_image") val imageUrl: String?,
+    @field:Json(name = "metacritic") val metacritic: Int?,
 )

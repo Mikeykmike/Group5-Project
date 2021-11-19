@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,9 +24,9 @@ class GameViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickLi
 
     var imageUrl: String = ""
         set(value) {
-//            if (field.isNotEmpty() && field != value) {
-//                Glide.with(itemView).load(imageUrl).into(image)
-//            }
+            if (value.isNotEmpty()) {
+                Glide.with(itemView.context).load(value).centerCrop().apply(RequestOptions().override(200, 200)).into(image)
+            }
             field = value
         }
 
@@ -33,7 +35,9 @@ class GameViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickLi
     }
 
     override fun onClick(view: View) {
-        findNavController(view).navigate(R.id.gameDetail)
+        val bundle = bundleOf("gameTitle" to text.text, "imageUrl" to imageUrl)
+        //bundle.putString("imageUrl", imageUrl)
+        findNavController(view).navigate(R.id.gameDetail, bundle)
     }
 }
 
@@ -77,7 +81,8 @@ class GameViewAdapter : RecyclerView.Adapter<GameViewHolder>() {
 
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) {
         holder.text.text = gameList.results[position].name
-        holder.imageUrl = gameList.results[position].imageUrl ?: holder.imageUrl
+        val url = gameList.results[position].imageUrl
+        holder.imageUrl = url ?: holder.imageUrl
     }
 
     override fun getItemCount(): Int = gameList.results.size
