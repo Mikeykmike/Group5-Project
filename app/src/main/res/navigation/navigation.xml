@@ -11,7 +11,7 @@
         android:label="Game Browser" >
         <action
             android:id="@+id/action_gameBrowser_to_gameDetail"
-            app:destination="@id/gameDetail" />
+            app:destination="@id/gameDetail"/>
     </fragment>
     <fragment
         android:id="@+id/gameDetail"
@@ -27,7 +27,9 @@
             android:defaultValue="Example Title" />
         <argument
             android:name="imageUrl"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"/>
     </fragment>
     <fragment
         android:id="@+id/favorites"

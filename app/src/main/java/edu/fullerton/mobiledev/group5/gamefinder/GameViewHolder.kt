@@ -35,9 +35,10 @@ class GameViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickLi
     }
 
     override fun onClick(view: View) {
-        val bundle = bundleOf("gameTitle" to text.text, "imageUrl" to imageUrl)
-        //bundle.putString("imageUrl", imageUrl)
-        findNavController(view).navigate(R.id.gameDetail, bundle)
+        val args = GameBrowserDirections.actionGameBrowserToGameDetail()
+        args.gameTitle = text.text.toString()
+        args.imageUrl = imageUrl
+        findNavController(view).navigate(args)
     }
 }
 

@@ -12,12 +12,13 @@ import android.view.Menu
 import edu.fullerton.mobiledev.group5.gamefinder.databinding.ActivityMainBinding
 import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentGameDetailBinding
 import android.R.attr.data
-
-import android.R
 import android.R.attr
+import androidx.navigation.fragment.navArgs
 
 
 class GameDetail : Fragment() {
+    private val args: GameDetailArgs by navArgs<GameDetailArgs>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val act: AppCompatActivity = activity as AppCompatActivity
@@ -30,12 +31,11 @@ class GameDetail : Fragment() {
     ): View {
         val binding = FragmentGameDetailBinding.inflate(
             layoutInflater, container, false)
-        val args = GameDetailArgs.fromBundle(savedInstanceState ?: Bundle.EMPTY)
         binding.gameTitle.text = args.gameTitle
         return binding.root
     }
 
-    fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    fun onCreateOptionsMenu(): Boolean {
         return true
     }
 
