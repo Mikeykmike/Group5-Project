@@ -14,6 +14,7 @@ import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentGameDetailB
 import android.R.attr.data
 import android.R.attr
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 
 
 class GameDetail : Fragment() {
@@ -32,6 +33,7 @@ class GameDetail : Fragment() {
         val binding = FragmentGameDetailBinding.inflate(
             layoutInflater, container, false)
         binding.gameTitle.text = args.gameTitle
+        Glide.with(binding.root.context).load(args.imageUrl).into(binding.gameArt)
         return binding.root
     }
 
