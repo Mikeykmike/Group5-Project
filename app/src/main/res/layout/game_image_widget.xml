@@ -17,7 +17,8 @@
         app:srcCompat="@mipmap/ic_launcher"
         tools:ignore="ContentDescription"
         android:padding="6dp"
-        android:scaleType="fitXY"/>
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
 
     <TextView
         android:id="@+id/textView"
