@@ -5,6 +5,7 @@ plugins {
 }
 
 apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdk 31
@@ -21,7 +22,7 @@ android {
 
     buildFeatures {
         dataBinding = true
-        viewBinding = true
+
     }
 
     buildTypes {
