@@ -2,7 +2,6 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigationController"
     app:startDestination="@id/gameBrowser">
 
     <fragment
@@ -30,6 +29,10 @@
             app:argType="string"
             android:defaultValue="@null"
             app:nullable="true"/>
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/favorites"
