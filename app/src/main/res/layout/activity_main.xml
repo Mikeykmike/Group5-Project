@@ -9,9 +9,11 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:navGraph="@navigation/navigation"
+        android:paddingTop="?attr/actionBarSize"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
         app:defaultNavHost="true"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,13 +26,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:menu="@menu/bottom_nav_bar"
         app:labelVisibilityMode="labeled"/>
-    
-    <FrameLayout
-        android:id="@+id/fragContainer"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationBar"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
