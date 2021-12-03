@@ -5,18 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GameFinder">
-        <activity
-            android:name=".Favorites"
-            android:exported="true" />
-        <activity
-            android:name=".Favorites2"
-            android:exported="true" />
+        android:theme="@style/Theme.GameFinder"
+        android:fullBackupContent="true"
+        android:allowBackup="true">
         <activity
             android:name=".MainActivity"
             android:exported="true">
