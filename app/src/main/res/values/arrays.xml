@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_upload_quality_entries" />
+    <string-array name="pref_upload_quality_values" />
+    <string-array name="reply_entries" />
+    <string-array name="reply_values" />
+</resources>
