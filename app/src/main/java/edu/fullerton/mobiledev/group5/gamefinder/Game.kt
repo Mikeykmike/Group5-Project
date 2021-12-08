@@ -9,9 +9,9 @@ data class Game(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L,
 
-    @ColumnInfo()
+    @ColumnInfo
     var name: String = "",
 
-    @ColumnInfo()
+    @ColumnInfo
     var description: String = ""
 )

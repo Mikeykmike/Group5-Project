@@ -2,8 +2,42 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigationController"
-    app:startDestination="@id/loginScreen">
+    app:startDestination="@id/gameBrowser">
+
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.register.RegisterFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_userDetailsFragment2"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.userDetails.UserDetailsFragment"
+        android:label="user_details_fragment"
+        tools:layout="@layout/fragment_user_details" >
+        <action
+            android:id="@+id/action_userDetailsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
 
     <fragment
         android:id="@+id/gameBrowser"
@@ -11,7 +45,7 @@
         android:label="Game Browser" >
         <action
             android:id="@+id/action_gameBrowser_to_gameDetail"
-            app:destination="@id/gameDetail" />
+            app:destination="@id/gameDetail"/>
     </fragment>
     <fragment
         android:id="@+id/gameDetail"
@@ -21,23 +55,33 @@
         <action
             android:id="@+id/action_gameDetail_to_gameBrowser"
             app:destination="@id/gameBrowser" />
+        <argument
+            android:name="gameTitle"
+            app:argType="string"
+            android:defaultValue="Example Title" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
-        android:id="@+id/loginScreen"
-        android:name="edu.fullerton.mobiledev.group5.gamefinder.LoginActivity"
-        android:label="fragment_login_screen"
-        tools:layout="@layout/fragment_login_screen" >
-        <action
-            android:id="@+id/action_loginScreen2_to_gameBrowser"
-            app:destination="@id/gameBrowser" />
-    </fragment>
+        android:id="@+id/favorites"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Favorites"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" />
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="edu.fullerton.mobiledev.group5.gamefinder.SettingsFragment"
-        android:label="SettingsFragment" />
-    <activity
-        android:id="@+id/signupActivity"
-        android:name="edu.fullerton.mobiledev.group5.gamefinder.SignupActivity"
-        android:label="SignupActivity" />
-    tools:layout="@layout/root_preferences">
+        android:id="@+id/search"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Search"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/trending"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Trending"
+        android:label="Trending"
+        tools:layout="@layout/fragment_trending" />
 </navigation>
