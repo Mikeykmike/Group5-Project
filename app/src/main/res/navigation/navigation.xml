@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/gameBrowser">
+
+    <fragment
+        android:id="@+id/gameBrowser"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.GameBrowser"
+        android:label="Game Browser" >
+        <action
+            android:id="@+id/action_gameBrowser_to_gameDetail"
+            app:destination="@id/gameDetail"/>
+    </fragment>
+    <fragment
+        android:id="@+id/gameDetail"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.GameDetail"
+        android:label="Game Details"
+        tools:layout="@layout/fragment_game_detail" >
+        <action
+            android:id="@+id/action_gameDetail_to_gameBrowser"
+            app:destination="@id/gameBrowser" />
+        <argument
+            android:name="gameTitle"
+            app:argType="string"
+            android:defaultValue="Example Title" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorites"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Favorites"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/search"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Search"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/trending"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.Trending"
+        android:label="Trending"
+        tools:layout="@layout/fragment_trending" />
+</navigation>
