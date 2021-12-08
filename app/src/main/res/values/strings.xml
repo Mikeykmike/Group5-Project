@@ -7,4 +7,5 @@
     <string name="favorites">Favorites</string>
     <string name="example_game">Example Game</string>
     <string name="game_description_here" />
+    <string name="login">Login</string>
 </resources>
