@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import edu.fullerton.mobiledev.group5.gamefinder.database.RegisterRepository
 import java.lang.IllegalArgumentException
 
-abstract class UserDetailsFactory (
+class UserDetailsFactory (
     private  val repository: RegisterRepository,
     private val application: Application
 ): ViewModelProvider.Factory{

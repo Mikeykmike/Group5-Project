@@ -14,12 +14,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import edu.fullerton.mobiledev.group5.gamefinder.R
 import edu.fullerton.mobiledev.group5.gamefinder.database.RegisterDatabase
 import edu.fullerton.mobiledev.group5.gamefinder.database.RegisterRepository
-import edu.fullerton.mobiledev.group5.gamefinder.databinding.UserDetailsFragmentBinding
+import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentUserDetailsBinding
 
 class UserDetailsFragment : Fragment() {
 
     private lateinit var userDetailsViewModel: UserDetailsViewModel
-    private lateinit var mainBinding: UserDetailsFragmentBinding
+    private lateinit var mainBinding: FragmentUserDetailsBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

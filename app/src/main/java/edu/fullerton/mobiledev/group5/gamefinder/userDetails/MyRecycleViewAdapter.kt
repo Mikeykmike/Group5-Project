@@ -8,7 +8,7 @@ import edu.fullerton.mobiledev.group5.gamefinder.R
 import edu.fullerton.mobiledev.group5.gamefinder.database.RegisterEntity
 import edu.fullerton.mobiledev.group5.gamefinder.database.RegisterRepository
 import edu.fullerton.mobiledev.group5.gamefinder.databinding.ListItemBinding
-import edu.fullerton.mobiledev.group5.gamefinder.databinding.RegisterFragmentBinding
+import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentRegisterBinding
 
 class MyRecycleViewAdapter(private val usersList :List<RegisterEntity>):RecyclerView.Adapter<MyviewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyviewHolder {

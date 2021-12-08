@@ -14,7 +14,7 @@ import androidx.navigation.fragment.NavHostFragment
 import edu.fullerton.mobiledev.group5.gamefinder.R
 import edu.fullerton.mobiledev.group5.gamefinder.database.RegisterDatabase
 import edu.fullerton.mobiledev.group5.gamefinder.database.RegisterRepository
-import edu.fullerton.mobiledev.group5.gamefinder.databinding.RegisterFragmentBinding
+import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentRegisterBinding
 
 
 /**
@@ -30,7 +30,7 @@ class RegisterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val mainBinding: RegisterFragmentBinding = DataBindingUtil.inflate(
+        val mainBinding: FragmentRegisterBinding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_register, container, false
         )

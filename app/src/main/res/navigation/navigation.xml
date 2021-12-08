@@ -4,6 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/gameBrowser">
 
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.register.RegisterFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_userDetailsFragment2"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="edu.fullerton.mobiledev.group5.gamefinder.userDetails.UserDetailsFragment"
+        android:label="user_details_fragment"
+        tools:layout="@layout/fragment_user_details" >
+        <action
+            android:id="@+id/action_userDetailsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/gameBrowser"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.GameBrowser"
