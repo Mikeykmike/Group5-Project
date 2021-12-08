@@ -20,9 +20,8 @@
             android:layout_height="30dp"
             android:src="@drawable/genre"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent">
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
-        </ImageView>
 
         <TextView
             android:id="@+id/itemTitle"
@@ -31,9 +30,9 @@
             android:textSize="20sp"
             android:textColor="#ffff"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/itemImage">
+            app:layout_constraintLeft_toRightOf="@+id/itemImage"/>
 
-        </TextView>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
