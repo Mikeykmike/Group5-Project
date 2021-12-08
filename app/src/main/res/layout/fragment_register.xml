@@ -60,7 +60,7 @@
                         android:padding="10dp"
                         android:textColor="#000000"
                         android:textColorHint="#808080"
-                        android:backgroundTint="#808080"
+                        android:backgroundTint="#dedede"
                         android:textSize="15sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,7 +86,7 @@
                         android:padding="10dp"
                         android:textColor="#000000"
                         android:textColorHint="#808080"
-                        android:backgroundTint="#808080"
+                        android:backgroundTint="#dedede"
                         android:textSize="15sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +110,7 @@
                         android:padding="10dp"
                         android:textColor="#000000"
                         android:textColorHint="#808080"
-                        android:backgroundTint="#808080"
+                        android:backgroundTint="#dedede"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
                         android:text="@={myViewModel.inputUsername}" />
@@ -136,7 +136,7 @@
                         android:padding="10dp"
                         android:textColor="#000000"
                         android:textColorHint="#808080"
-                        android:backgroundTint="#808080"
+                        android:backgroundTint="#dedede"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
                         android:text="@={myViewModel.inputPassword}"/>

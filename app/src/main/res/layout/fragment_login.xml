@@ -58,7 +58,7 @@
                         android:padding="10dp"
                         android:textColor="#000000"
                         android:textColorHint="#808080"
-                        android:backgroundTint="#808080"
+                        android:backgroundTint="#dedede"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
                         android:text="@={myLoginViewModel.inputUsername}" />
@@ -84,7 +84,7 @@
                         android:padding="10dp"
                         android:textColor="#000000"
                         android:textColorHint="#808080"
-                        android:backgroundTint="#808080"
+                        android:backgroundTint="#dedede"
                         android:textSize="15sp"
                         android:inputType="textPersonName"
                         android:text="@={myLoginViewModel.inputPassword}" />
@@ -127,9 +127,9 @@
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:textColor="#000"
+                        android:textColor="#000000"
                         android:textSize="18sp"
-                        android:text="Already have an account?" />
+                        android:text="Don't have have an account?" />
 
                     <Button
                         android:id="@+id/SignUpButton"
@@ -141,6 +141,7 @@
                         android:background="@android:color/transparent"
                         android:textAllCaps="false"
                         android:text="Sign Up"
+                        android:textColor= "#FF6200EE"
                         android:textStyle="bold"
                         android:onClick="@{()->myLoginViewModel.signUP()}" />
 
