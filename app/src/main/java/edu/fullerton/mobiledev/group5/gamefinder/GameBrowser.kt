@@ -20,28 +20,28 @@ class GameBrowser : Fragment() {
         return mainBinding.root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.browser_app_bar, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        inflater.inflate(R.menu.browser_app_bar, menu)
+//        super.onCreateOptionsMenu(menu, inflater)
+//    }
 
-    fun onCreateOptionsMenu(): Boolean {
-        return true
-    }
-
-    override fun onOptionsItemSelected(menuItem: MenuItem): Boolean {
-        when (menuItem.itemId) {
-            R.id.action_login -> {
-                val args = GameBrowserDirections.actionGameBrowserToLoginFragment()
-                NavHostFragment.findNavController(this).navigate(args)
-            }
-            R.id.action_register -> {
-                val args = GameBrowserDirections.actionGameBrowserToRegisterFragment()
-                NavHostFragment.findNavController(this).navigate(args)
-            }
-        }
-        return super.onOptionsItemSelected(menuItem)
-    }
+//    fun onCreateOptionsMenu(): Boolean {
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(menuItem: MenuItem): Boolean {
+//        when (menuItem.itemId) {
+//            R.id.action_login -> {
+//                val args = GameBrowserDirections.actionGameBrowserToLoginFragment()
+//                NavHostFragment.findNavController(this).navigate(args)
+//            }
+//            R.id.action_register -> {
+//                val args = GameBrowserDirections.actionGameBrowserToRegisterFragment()
+//                NavHostFragment.findNavController(this).navigate(args)
+//            }
+//        }
+//        return super.onOptionsItemSelected(menuItem)
+//    }
 
 }
 

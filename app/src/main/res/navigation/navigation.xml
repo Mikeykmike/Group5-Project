@@ -2,14 +2,14 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/gameBrowser">
+    app:startDestination="@id/loginFragment">
 
 
     <fragment
         android:id="@+id/registerFragment"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.register.RegisterFragment"
         android:label="Registration"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -18,7 +18,7 @@
         android:id="@+id/loginFragment"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.login.LoginFragment"
         android:label="Login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/registerFragment" />
@@ -38,14 +38,13 @@
     </fragment>
 
 
-
     <fragment
         android:id="@+id/gameBrowser"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.GameBrowser"
-        android:label="Game Browser" >
+        android:label="Game Browser">
         <action
             android:id="@+id/action_gameBrowser_to_gameDetail"
-            app:destination="@id/gameDetail"/>
+            app:destination="@id/gameDetail" />
         <action
             android:id="@+id/action_gameBrowser_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -57,23 +56,23 @@
         android:id="@+id/gameDetail"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.GameDetail"
         android:label="Game Details"
-        tools:layout="@layout/fragment_game_detail" >
+        tools:layout="@layout/fragment_game_detail">
         <action
             android:id="@+id/action_gameDetail_to_gameBrowser"
             app:destination="@id/gameBrowser" />
         <argument
             android:name="gameTitle"
-            app:argType="string"
-            android:defaultValue="Example Title" />
+            android:defaultValue="Example Title"
+            app:argType="string" />
         <argument
             android:name="imageUrl"
-            app:argType="string"
             android:defaultValue="@null"
-            app:nullable="true"/>
+            app:argType="string"
+            app:nullable="true" />
         <argument
             android:name="id"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/favorites"
