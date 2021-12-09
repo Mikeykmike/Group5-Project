@@ -15,4 +15,10 @@
         <item name="colorControlNormal">@android:color/white</item>
         <item name="iconTint">@android:color/white</item>
     </style>
+    <style name="Theme.GameFinder.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.GameFinder.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.GameFinder.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
