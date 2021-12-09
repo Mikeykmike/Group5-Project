@@ -3,6 +3,7 @@ package edu.fullerton.mobiledev.group5.gamefinder
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentGameBrowserBinding
 
@@ -31,7 +32,12 @@ class GameBrowser : Fragment() {
     override fun onOptionsItemSelected(menuItem: MenuItem): Boolean {
         when (menuItem.itemId) {
             R.id.action_login -> {
-                return true
+                val args = GameBrowserDirections.actionGameBrowserToLoginFragment()
+                NavHostFragment.findNavController(this).navigate(args)
+            }
+            R.id.action_register -> {
+                val args = GameBrowserDirections.actionGameBrowserToRegisterFragment()
+                NavHostFragment.findNavController(this).navigate(args)
             }
         }
         return super.onOptionsItemSelected(menuItem)

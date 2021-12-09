@@ -6,4 +6,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
         android:id="@+id/action_login"
         android:title="@string/login"
         app:showAsAction="never|withText" />
+    <item
+        android:id="@+id/action_register"
+        android:title="@string/register"
+        app:showAsAction="never|withText" />
 </menu>

@@ -39,9 +39,7 @@ class LoginFragment : Fragment() {
         val factory = LoginViewModelFactory(repository, application)
 
         loginViewModel = ViewModelProvider(this, factory).get(LoginViewModel::class.java)
-
         mainBinding.myLoginViewModel = loginViewModel
-
         mainBinding.lifecycleOwner = this
 
         loginViewModel.navigatetoRegister.observe(viewLifecycleOwner, Observer { hasFinished->
