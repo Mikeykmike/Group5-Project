@@ -2,6 +2,7 @@ package edu.fullerton.mobiledev.group5.gamefinder
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -11,7 +12,9 @@ class GameBrowser : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        setHasOptionsMenu(true)
+        val act: AppCompatActivity = activity as AppCompatActivity
+        act.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
         val mainBinding = FragmentGameBrowserBinding.inflate(layoutInflater)
 
         mainBinding.recyclerView.layoutManager = GridLayoutManager(activity,4)

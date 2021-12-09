@@ -45,12 +45,6 @@
         <action
             android:id="@+id/action_gameBrowser_to_gameDetail"
             app:destination="@id/gameDetail" />
-        <action
-            android:id="@+id/action_gameBrowser_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_gameBrowser_to_registerFragment"
-            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameDetail"
