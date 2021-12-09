@@ -20,11 +20,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import android.view.MenuInflater
 import android.view.Menu
+import android.widget.ListAdapter
+import android.widget.Toast
 import androidx.core.text.HtmlCompat
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 
 class GameDetail : Fragment() {
     private val args: GameDetailArgs by navArgs()
     private lateinit var info: GameInformation
+    private lateinit var mFavViewModel: FavViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,10 +69,22 @@ class GameDetail : Fragment() {
             }
 
             R.id.action_favorite -> {
+                mFavViewModel = ViewModelProvider(this).get(FavViewModel::class.java)
+                val adapter = FavAdapter()
+
+                addToFavorites()
                 return true
             }
         }
         return super.onOptionsItemSelected(menuItem)
+    }
+
+    private fun addToFavorites() {
+        val game_title = args.gameTitle
+        val favoriteItem = FavEntity (0, game_title)
+        mFavViewModel.addFavorite(favoriteItem)
+        Toast.makeText(activity, "Added to Favorites", Toast.LENGTH_LONG).show()
+        findNavController().navigate(R.id.favorites)
     }
 
     private fun loadDetails(id: Int, binding: FragmentGameDetailBinding)

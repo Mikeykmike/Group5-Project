@@ -10,6 +10,8 @@ import edu.fullerton.mobiledev.group5.gamefinder.databinding.FragmentGameBrowser
 
 class GameBrowser : Fragment() {
 
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         val act: AppCompatActivity = activity as AppCompatActivity

@@ -68,11 +68,15 @@
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
+
     <fragment
         android:id="@+id/favorites"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.Favorites"
         android:label="Favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+
+    </fragment>
+
     <fragment
         android:id="@+id/search"
         android:name="edu.fullerton.mobiledev.group5.gamefinder.Search"
